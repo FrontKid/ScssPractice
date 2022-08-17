@@ -1,0 +1,2 @@
+# ScssPractice
+Landing using Scss
