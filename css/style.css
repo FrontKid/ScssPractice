@@ -1,0 +1,143 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+@font-face {
+  font-family: "Cormorant Regular";
+  src: url("/source/fonts/cormorant/Cormorant-Bold.eot");
+  src: url("/source/fonts/cormorant/Cormorant-Bold.eot") format("embedded-opentype"), url("/source/fonts/cormorant/Cormorant-Regular.woff") format("woff"), url("/source/fonts/cormorant/Cormorant-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Cormorant Bold";
+  src: url("/source/fonts/cormorant/Cormorant-Bold.eot");
+  src: url("/source/fonts/cormorant/Cormorant-Bold.eot") format("embedded-opentype"), url("/source/fonts/cormorant/Cormorant-Regular.woff") format("woff"), url("/source/fonts/cormorant/Cormorant-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Cormorant Medium";
+  src: url("/source/fonts/cormorant/Cormorant-Medium.eot");
+  src: url("/source/fonts/cormorant/Cormorant-Medium.eot") format("embedded-opentype"), url("/source/fonts/cormorant/Cormorant-Medium.woff") format("woff"), url("/source/fonts/cormorant/Cormorant-Medium.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Cormorant Semibold";
+  src: url("/source/fonts/cormorant/Cormorant-SemiBold.eot");
+  src: url("/source/fonts/cormorant/Cormorant-SemiBold.eot") format("embedded-opentype"), url("/source/fonts/cormorant/Cormorant-SemiBoldItalic.woff") format("woff"), url("/source/fonts/cormorant/Cormorant-SemiBold.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: #3C2A2A;
+}
+
+body {
+  background-color: rgb(181, 151, 151);
+}
+
+.wrapper {
+  width: calc(100vw - 60px);
+  margin: 70px 0 0 60px;
+  padding: 97px 0 127px 0;
+  background-color: #FBF6F6;
+}
+
+.container {
+  max-width: 1160px;
+  margin: 0 auto;
+}
+
+.header__container {
+  max-width: 1220px;
+}
+
+.header__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header__top .header__top-nav {
+  min-width: 500px;
+}
+.header__top .header__top-nav .header__top-nav-list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.semibold, .medium, .bold, .regular {
+  text-transform: uppercase;
+}
+
+.regular {
+  font-family: "Cormorant Regular";
+  font-weight: 400;
+}
+
+.bold {
+  font-family: "Cormorant Bold";
+  font-weight: 700;
+}
+
+.medium {
+  font-family: "Cormorant Medium";
+  font-weight: 500;
+}
+
+.semibold {
+  font-family: "Cormorant Semibold";
+  font-weight: 600;
+}

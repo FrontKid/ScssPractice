@@ -1,0 +1,72 @@
+//IMPORT FAILS
+@import "_reset";
+@import "../fonts/fonts";
+
+//GLOBAL STYLES
+*{
+   box-sizing: border-box;
+}
+a{
+   text-decoration: none;
+   color:#3C2A2A;
+}
+//BODY COLOR
+body{ 
+   background-color:  rgba(181, 151, 151, 1);
+}
+
+//
+.wrapper{
+   width: calc(100vw - 60px);
+   margin: 70px 0 0 60px;
+   padding: 97px 0 127px 0;
+   background-color: #FBF6F6;
+}
+
+.container{
+   max-width:1160px;
+   margin: 0 auto;
+}
+.header__container{
+   max-width: 1220px;
+}
+
+.header__top{
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+
+   .header__top-nav{
+      min-width: 500px;
+      .header__top-nav-list{
+         display: flex;
+         justify-content: space-between;
+         
+      }
+   }
+
+}
+%toUp{
+   text-transform: uppercase;
+}
+.regular {
+   font-family: 'Cormorant Regular';
+   font-weight: 400;
+   @extend %toUp;
+}
+.bold {
+   font-family: 'Cormorant Bold';
+   font-weight: 700;
+   @extend %toUp;
+
+}
+.medium {
+   font-family: 'Cormorant Medium';
+   font-weight: 500;
+   @extend %toUp;
+}
+.semibold {
+   font-family: 'Cormorant Semibold';
+   font-weight: 600;
+   @extend %toUp;
+}
