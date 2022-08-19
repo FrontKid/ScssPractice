@@ -66,7 +66,7 @@ table {
   font-family: "Cormorant Medium";
   src: url("/source/fonts/cormorant/Cormorant-Medium.eot");
   src: url("/source/fonts/cormorant/Cormorant-Medium.eot") format("embedded-opentype"), url("/source/fonts/cormorant/Cormorant-Medium.woff") format("woff"), url("/source/fonts/cormorant/Cormorant-Medium.ttf") format("truetype");
-  font-weight: normal;
+  font-weight: 500;
   font-style: normal;
 }
 @font-face {
@@ -85,59 +85,136 @@ a {
   color: #3C2A2A;
 }
 
-body {
-  background-color: rgb(181, 151, 151);
-}
-
-.wrapper {
-  width: calc(100vw - 60px);
-  margin: 70px 0 0 60px;
-  padding: 97px 0 127px 0;
-  background-color: #FBF6F6;
-}
-
 .container {
   max-width: 1160px;
   margin: 0 auto;
 }
 
+.button {
+  min-width: 560px;
+  min-height: 100px;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  padding-left: 94px;
+}
+.button::after {
+  content: "";
+  background-image: url(/img/button-arrow.svg);
+  background-repeat: no-repeat;
+  width: 32px;
+  height: 10px;
+  position: absolute;
+  top: 50%;
+  right: 50px;
+}
+
+body {
+  font-family: "Cormorant Regular";
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 22px;
+}
+
+.body__index {
+  background-color: rgb(181, 151, 151);
+}
+
+.wrapper {
+  margin: 70px 0 0 60px;
+  padding: 97px 0 127px 0;
+  background-color: #FBF6F6;
+}
+
 .header__container {
   max-width: 1220px;
+  position: relative;
 }
 
 .header__top {
   display: flex;
-  align-items: center;
   justify-content: space-between;
 }
 .header__top .header__top-nav {
+  font-family: "Cormorant Medium";
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 22px;
   min-width: 500px;
 }
 .header__top .header__top-nav .header__top-nav-list {
   display: flex;
   justify-content: space-between;
 }
-
-.semibold, .medium, .bold, .regular {
-  text-transform: uppercase;
-}
-
-.regular {
-  font-family: "Cormorant Regular";
-  font-weight: 400;
-}
-
-.bold {
-  font-family: "Cormorant Bold";
+.header__top .header__top-nav .header__top-nav-list .header__top-nav-link:focus {
   font-weight: 700;
 }
 
-.medium {
+.header__info {
+  padding-left: 100px;
+}
+.header__info .header__heading {
+  font-family: "Cormorant Bold";
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 22px;
+  margin: 0 0 15px 0;
+}
+.header__info .header__title {
   font-family: "Cormorant Medium";
-  font-weight: 500;
+  font-size: 80px;
+  font-weight: 800;
+  line-height: 97px;
+  margin: 0 0 40px -100px;
+}
+.header__info .header__desc {
+  max-width: 460px;
+}
+.header__info .header__desc .header__desc-item:not(:last-child) {
+  margin: 0 0 26px 0;
+}
+.header__info .header__desc-numbers {
+  display: flex;
+  justify-content: space-between;
+  max-width: 382px;
+  margin: 30px 0 0 0;
+}
+.header__info .header__desc-numbers span {
+  display: block;
+  font-family: "";
+  font-size: 50px;
+  font-weight: 400;
+  line-height: 61px;
 }
 
-.semibold {
-  font-family: "Cormorant Semibold";
-  font-weight: 600;
+.header__img-item {
+  position: absolute;
+  bottom: -335px;
+  right: 0;
+}
+
+.services {
+  padding: 141px 0 164px 0;
+}
+.services .services__wrapper {
+  background-color: transparent;
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.services .services__container {
+  max-width: 1220px;
+  margin: 0 auto;
+}
+.services .services__buttons {
+  display: flex;
+  justify-content: space-between;
+}
+.services .services__buttons .services__buttons-item {
+  font-family: "Cormorant Bold";
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24px;
+  margin-top: 20px;
+  position: relative;
 }

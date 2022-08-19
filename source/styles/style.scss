@@ -1,8 +1,15 @@
-//IMPORT FAILS
+//IMPORT FILES START 
 @import "_reset";
-@import "../fonts/fonts";
+@import "../fonts/_fonts";
+@import "../styles/_mixin";
+//IMPORT FILES END 
 
-//GLOBAL STYLES
+//font-family: 'Cormorant Regular';
+//font-family: 'Cormorant Bold';
+//font-family: 'Cormorant Medium';
+//font-family: 'Cormorant Semibold';
+
+//GLOBAL STYLES START
 *{
    box-sizing: border-box;
 }
@@ -10,63 +17,130 @@ a{
    text-decoration: none;
    color:#3C2A2A;
 }
-//BODY COLOR
-body{ 
-   background-color:  rgba(181, 151, 151, 1);
-}
-
-//
-.wrapper{
-   width: calc(100vw - 60px);
-   margin: 70px 0 0 60px;
-   padding: 97px 0 127px 0;
-   background-color: #FBF6F6;
-}
-
 .container{
    max-width:1160px;
    margin: 0 auto;
 }
+.button{
+   min-width: 560px;
+   min-height: 100px;
+   border: none;
+   text-align: left;
+   cursor: pointer;
+   padding-left: 94px;
+   &::after{
+      content: '';
+      background-image: url(/img/button-arrow.svg);
+      background-repeat: no-repeat;
+      width: 32px;
+      height: 10px;
+      position: absolute;
+      top: 50%;
+      right: 50px;
+   }
+}
+//GLOBAL STYLES END
+
+//BODY STYLE START
+body{ 
+   @include textDecor('Cormorant Regular',18px,400,22px);
+}
+//BODY STYLE END
+
+//INDEX BODY START
+.body__index{
+   background-color:  rgba(181, 151, 151, 1);
+}
+//INDEX BODY END
+
+//WHITE BACKGROUND START
+.wrapper{
+   margin: 70px 0 0 60px;
+   padding: 97px 0 127px 0;
+   background-color: #FBF6F6;
+}
+//WHITE BACKGROUND END
+
+//HEADER NAV CONTENT START
 .header__container{
    max-width: 1220px;
-}
+   position: relative;
 
+}
 .header__top{
    display: flex;
-   align-items: center;
    justify-content: space-between;
-
    .header__top-nav{
+      @include textDecor('Cormorant Medium',18px,500,22px);
       min-width: 500px;
       .header__top-nav-list{
          display: flex;
          justify-content: space-between;
-         
+         .header__top-nav-link:focus{
+            font-weight: 700;
+         }
       }
    }
+}
+//HEADER NAV CONTENT END
 
-}
-%toUp{
-   text-transform: uppercase;
-}
-.regular {
-   font-family: 'Cormorant Regular';
-   font-weight: 400;
-   @extend %toUp;
-}
-.bold {
-   font-family: 'Cormorant Bold';
-   font-weight: 700;
-   @extend %toUp;
+//HEADER DESCRIPTION START
 
+.header__info{
+   padding-left: 100px;
+   .header__heading{
+      @include textDecor('Cormorant Bold',18px,700,22px);
+      margin: 0 0 15px 0;
+   }
+   .header__title{
+      @include textDecor('Cormorant Medium',80px,800,97px);
+      margin: 0 0 40px -100px;
+   }
+   .header__desc{
+      max-width: 460px;
+      .header__desc-item:not(:last-child){
+         margin: 0 0 26px 0;
+      }
+   }
+   .header__desc-numbers{
+      display: flex;
+      justify-content: space-between;
+      max-width: 382px;
+      margin: 30px 0 0 0;
+      span{
+         display: block;
+      @include textDecor('',50px,400,61px);
+      }
+   }
 }
-.medium {
-   font-family: 'Cormorant Medium';
-   font-weight: 500;
-   @extend %toUp;
+.header__img-item{
+   position: absolute;
+   bottom: -335px;
+right: 0;
 }
-.semibold {
-   font-family: 'Cormorant Semibold';
-   font-weight: 600;
-   @extend %toUp;
+
+//HEADER DESCRIPTION END
+
+
+.services{
+   .services__wrapper{
+      background-color: transparent;
+      padding: 0;
+      margin-top: 0;
+      margin-bottom: 0;
+   }
+   .services__container{
+      max-width: 1220px;
+      margin: 0 auto;
+   }
+   padding: 141px 0 164px 0;
+   .services__buttons{
+      display: flex;
+      justify-content: space-between;
+      .services__buttons-item{
+         @include textDecor('Cormorant Bold',20px,700,24px);
+         margin-top: 20px;
+         position: relative;
+      }
+   }
 }
