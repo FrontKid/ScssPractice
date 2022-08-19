@@ -218,3 +218,56 @@ body {
   margin-top: 20px;
   position: relative;
 }
+
+.footer {
+  background-color: rgb(60, 42, 42);
+  color: #fff;
+  padding: 100px 0 100px 0;
+}
+.footer .footer__inner {
+  display: flex;
+  justify-content: space-between;
+}
+.footer .footer__inner .footer__item {
+  color: #fff;
+  position: relative;
+}
+.footer .footer__inner .footer__item::before {
+  content: "";
+  width: 100%;
+  height: 1px;
+  background-color: #fff;
+  position: absolute;
+  bottom: 2px;
+}
+.footer .footer__inner .footer__items:not(:nth-child(2)) {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-direction: column;
+}
+.footer .footer__inner .footer__items:not(:nth-child(2)) .footer__item-icons {
+  display: flex;
+}
+.footer .footer__inner .footer__items:not(:nth-child(2)) .footer__item-icons .footer__item-icon:not(:last-child) {
+  margin-right: 18px;
+}
+.footer .footer__inner .footer__items:not(:nth-child(2)) .footer__item:first-child {
+  margin-bottom: 20px;
+}
+.footer .footer__inner .footer__items:not(:nth-child(2)) {
+  position: relative;
+}
+.footer .footer__inner .footer__items:not(:nth-child(2)) .footer__item-icons {
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+}
+.footer .footer__inner .footer__items:nth-child(2) {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.footer .footer__inner .footer__items:nth-child(2) .footer__item:first-child {
+  margin-bottom: 20px;
+}
